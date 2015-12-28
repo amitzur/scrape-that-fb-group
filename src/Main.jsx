@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import fileIndex from './fileIndex';
+import filePath from './filePath';
 
 require('./stylesheets/main.scss');
-console.log("loading index " + fileIndex);
+console.log("loading file " + filePath);
 
-ReactDOM.render(<App fileIndex={fileIndex}/>, document.getElementById("main"));
+ReactDOM.render(<App filePath={filePath}/>, document.getElementById("main"));

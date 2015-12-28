@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Facebook Harvester",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Scrape that FB group",
+  "homepage_url": "http://www.github.com/amitzur/scrape-that-fb-group",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -13,7 +13,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.facebook.com/groups/FEDS.IL/"
+        "https://www.facebook.com/groups/*"
       ],
       "js": [
         "src/inject/inject.js"

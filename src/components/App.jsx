@@ -44,7 +44,7 @@ export default React.createClass({
     },
     
     componentWillMount: function() {
-        fetch("/data/" + this.props.fileIndex + ".json").then(resp => {
+        fetch(this.props.filePath).then(resp => {
             return resp.json();
         }).then(data => {
             console.log(data);

@@ -31,8 +31,10 @@ http.createServer(function(req, res) {
         console.log("req data: " + body.substr(0,100));
         console.log("writing to file " + file);
         fs.writeFileSync(outFile, body);
-        fs.writeFileSync(outFile, file);
-        fs.writeFileSync(path.replace("@.json", "fileIndex"), String(fileIndex++));
+        fs.writeFileSync(file, body);
+        fs.writeFileSync(path.replace("@.json", "fileIndex"), String(fileIndex));
+        fs.writeFileSync(__dirname + "/src/filePath.js", "export default '/data/versions/" + fileIndex + ".json';");
+        fileIndex++;
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.end("wrote to file: " + file);
     });
